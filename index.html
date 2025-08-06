@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="icon" type="image/png" href="assets/images/myLogo.png">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        // Set environment variables for production (Netlify will inject these)
+        window.EMAILJS_PUBLIC_KEY = '${EMAILJS_PUBLIC_KEY}' !== '${EMAILJS_PUBLIC_KEY}' ? '${EMAILJS_PUBLIC_KEY}' : undefined;
+        window.EMAILJS_SERVICE_ID = '${EMAILJS_SERVICE_ID}' !== '${EMAILJS_SERVICE_ID}' ? '${EMAILJS_SERVICE_ID}' : undefined;
+        window.EMAILJS_TEMPLATE_ID = '${EMAILJS_TEMPLATE_ID}' !== '${EMAILJS_TEMPLATE_ID}' ? '${EMAILJS_TEMPLATE_ID}' : undefined;
+    </script>
+    <script src="js/config.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with configuration
+        (function(){
+            emailjs.init({
+                publicKey: window.CONFIG.EMAILJS_PUBLIC_KEY,
+            });
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="left-div">
+            <a href="index.html" style="text-decoration: none;">
+                <nav id="logo">
+                    <h2>IB</h2>
+                </nav>
+            </a>
+        </div>
+        <div class="right-div">
+            <nav id="menu">
+                <ul>
+                    <li class="about-btn">About</li>
+                    <li class="projects-btn">Projects</li>
+                    <li class="certs-btn">Certs</li>
+                    <li class="FAQs-btn">FAQs</li>
+                    <li class="contact-btn">Contact</li>
+                </ul>
+            </nav>
+            <a href="mailto:booiiviwe4394@gmail.com" style="text-decoration: none;"><button class="say-hi">
+                Say Hi
+                <img class="hand" src="assets/icons/wave.svg" alt="Arrow icon">
+            </button></a>
+            <div class="menu-icon">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <img class="image-gradient" src="assets/images/gradient.png" alt="Gradient image">
+    <div class="layer-blur"></div>
+    <div class="cursor" id="cursor"></div>
+    
+    <!-- main content -->
+    <main>
+        <!-- Landing page-->
+        <section class="landing-page">
+            <div class="name-surname">
+                <div class="circle"></div>
+                <p>Hey! I'm Iviwe Booi</p>
+            </div>
+            <h1>Building the Future, One Line of Code at a Time.</h1>
+            <p class="description">Software Dev. Passionate about crafting innovative solutions with modern technologies.</p>
+            <div class="buttons">
+                <button class="see-my-work">See My Work</button>
+                <a href="assets/files/resume.pdf" style="text-decoration: none;" download>
+                    <button class="get-my-resume">
+                        <div class="circle"></div>
+                        Get My Resume
+                        <img src="assets/icons/download.svg" alt="Arrow icon" height="25">
+                    </button>
+                </a>
+            </div>
+            <img class="arrow-down" src="assets/icons/arrow-down.svg" alt="Arrow icon">
+        </section>
+
+        <!-- About me page-->
+        <section class="about-me">
+            <div class="left-div">
+                <h1>Meet Iviwe</h1>
+                <p>Hello! I'm Iviwe Booi, a passionate software developer and final-year
+                     Computer Science student at the University of Cape Town (UCT). My 
+                     journey in the tech world has been fueled by a deep curiosity and 
+                     a desire to create innovative solutions that make a difference.
+                    With a solid foundation in HTML, CSS, JavaScript, Java, and Python, 
+                    I have honed my skills through various personal projects that reflect my
+                    creativity and technical prowess. I thrive on the challenge of transforming 
+                    ideas into dynamic and responsive applications, ensuring that they not only 
+                    function seamlessly but also provide an engaging user experience.</p>
+                    <p>Throughout my academic career, I have embraced opportunities to 
+                        expand my knowledge and collaborate with fellow students on 
+                        exciting projects. My experience has equipped me with a strong
+                        understanding of software development principles and best practices,
+                        empowering me to tackle complex problems with confidence.</p>
+                    <p>As I approach the next chapter of my career, I am eager to leverage
+                        my skills in a professional environment where I can contribute to impactful
+                        projects and continue to grow as a developer. I am excited about the possibilities
+                        that lie ahead and look forward to connecting with like-minded individuals
+                        who share my passion for technology.
+                        Thank you for visiting my portfolio, and I hope you enjoy exploring my work!</p>
+            </div>
+            <div class="right-div">
+                <p>Figma</p>
+                <p>HTML5</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>Java</p>
+                <p>Python</p>
+                <p>Chrome DevTools</p>
+                <p>Git</p>
+                <p>Github</p>
+                <p>Linux</p>
+                <p>Visual Studio Code</p>
+                <p>PyCharm</p>
+            </div>
+        </section>
+
+        <!-- Design process page-->
+        <section class="design-process">
+            <div class="left-div">
+                <img src="assets/images/design.jpg" alt="Design process">
+            </div>
+            <div class="right-div">
+                <div class="design-process-text">
+                    <div class="circle"></div>
+                    <p>Design process</p>
+                </div>
+                <h1>Process</h1>
+                <p>Crafting Innovative Solutions that Inspire and Elevate Brands Through Thoughtful Development.</p>
+                <div class="buttons">
+                    <button class="book-a-free-call">Book a Free Call</button>
+                    <button class="see-projects">
+                        <div class="circle"></div>
+                        See Projects
+                        <img src="assets/icons/arrow.svg" alt="Arrow icon" height="20" >
+                    </button>
+                </div>
+                <div class="card">
+                    <p class="counter">1</p>
+                    <img src="assets/icons/bulb.svg" alt="Bulb icon">
+                    <h2>Define Your Vision</h2>
+                    <p class="explanation">Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly.</p>
+                </div>
+                <div class="card">
+                    <p class="counter" style="padding: 12px 20px;">2</p>
+                    <img src="assets/icons/tasks.svg" alt="Bulb icon">
+                    <h2>Submit Your Request</h2>
+                    <p class="explanation">Easily submit your design requirements through my email, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity.</p>
+                </div>
+                <div class="card">
+                    <p class="counter" style="padding: 12px 20px;">3</p>
+                    <img src="assets/icons/rocket.svg" alt="Bulb icon">
+                    <h2>Project Delivered</h2>
+                    <p class="explanation">As a dedicated freelancer, I ensure your project is completed with precision. With a keen eye for detail and a passion for quality, I bring your vision to life—on time and beyond expectations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects page-->
+        <section class="projects">
+            <h1>Personal Projects</h1>
+            <div class="personal-projects">
+                <div class="project-card">
+                    <video autoplay loop muted>
+                        <source src="assets/videos/weatherApp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="view-project">View Project<img src="assets/icons/arrow-up.svg" alt="Arrow icon" height="20"></button>
+                </div>  
+                <div class="project-card">
+                    <video autoplay loop muted>
+                        <source src="assets/videos/contactsApp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="view-project">View Project<img src="assets/icons/arrow-up.svg" alt="Arrow icon" height="20"></button>
+                </div>  
+                <div class="project-card">
+                    <video autoplay loop muted>
+                        <source src="assets/videos/superheroApp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="view-project">View Project<img src="assets/icons/arrow-up.svg" alt="Arrow icon" height="20"></button>
+                </div>
+                <div class="project-card">
+                    <video autoplay loop muted>
+                        <source src="assets/videos/pineCityZooApp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="view-project">View Project<img src="assets/icons/arrow-up.svg" alt="Arrow icon" height="20"></button>
+                </div>  
+                <div class="project-card">
+                    <video autoplay loop muted>
+                        <source src="assets/videos/calculator.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="view-project">View Project<img src="assets/icons/arrow-up.svg" alt="Arrow icon" height="20"></button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Certification Page-->
+        <section class="certs-page">
+            <div class="inner-div">
+                <h1>Certifications</h1>
+                <div class="certs-div">
+                    <a href="assets/images/js-cert.jpeg" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/js-cert.jpeg" alt="JavaScript Certificate">
+                    </a>
+                    <a href="assets/images/rest-api-cert.jpeg" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/rest-api-cert.jpeg" alt="RESTapi certificate">
+                    </a>
+                    <a href="assets/images/web-api-cert.jpeg" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/web-api-cert.jpeg" alt="Web API certificate">
+                    </a>
+                    <a href="assets/images/fnb-cert.jpeg" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/fnb-cert.jpeg" alt="Full Stack development Certification">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs page -->
+        <section class="faqs-page">
+            <div class="inner-div">
+                <h1>Frequently Asked Questions</h1>
+                <div class="card-div">
+                    <div>
+                    <p>There are no FAQs yet.</p>
+                    <img src="assets/icons/plus.svg" alt="more icon" class="plus-icon">
+                    <img src="assets/icons/minus.svg" alt="less icon" class="minus-icon">
+                    </div>
+                    <div class="collapsible-content" style="display: none">
+                        <p>You got a question? Contact me now.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact page -->
+        <section class="contact-me">
+            <div class="form-feedback" id="success">
+                <img src="assets/icons/success.svg" alt="Check icon"height="50">
+                <h2 style="color: rgba(79,255,50,1);">Thank you for contacting me!</h2>
+                <p>I'll get back to you as soon as possible.</p>
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="form-feedback" id="error">
+                <img src="assets/icons/error.svg" alt="Error icon"height="50">
+                <h2 style="color: rgba(255,50,50,1);">Oops! Something went wrong.</h2>
+                <p>Please try again later.</p>
+                <button class="close-btn">Close</button>
+            </div>
+            <h1>Let me enhance your excellent enterprise with an amazing website</h1>
+            <p>For every prosperous enterprise, a proficient website is necessary, and I'm the expert for it. Contact me now, let's kick-start!</p>
+            <p>Also you can find me here:</p>
+            <div class="social-media">
+                <a class="linked-in" href="https://www.linkedin.com/in/iviwe-booi-6b467129a/"><img src="assets/icons/linkedin.svg" alt="LinkedIn icon"></a>
+                <a class="github" href="https://github.com/IviweBooi"><img src="assets/icons/github.svg" alt="GitHub icon"></a>
+                <a class="instagram" href="https://www.instagram.com/iviiwebooi/"><img src="assets/icons/insta.svg" alt="Instagram icon"></a>
+            </div>
+            <form class="contact-form">
+                <input class="full-name" name="name" type="text" placeholder="Full Name"  aria-label="Full Name" autocomplete="on" required>
+                <input class="email" name="email" type="email" placeholder="Email" aria-label="Email" autocomplete="on" required>
+                <input class="phone" name="phone" type="tel" placeholder="Phone" aria-label="Phone" autocomplete="on" required>
+                <input class="website-niche" name="website-niche" type="text" placeholder="Your Website Niche" aria-label="Website Niche" autocomplete="on" autocorrect="on" required>
+                <textarea class="message" name="message" placeholder="Tell me more about your needs..." required aria-label="Tell me more about your needs" autocorrect="on" required></textarea>
+                <button id="submit-btn" class="disabled" type="submit" aria-label="Submit" >Submit</button>
+            </form>
+            <p class="contact-info">
+                You can email me at 
+                <a class="email-link" href="mailto:booiiviwe4394@gmail.com">booiiviwe4394@gmail.com</a>
+            </p> 
+            <p class="contact-info">
+                Or call this number : 
+                <a class="phone-link" href="tel:+27656042803">+27 (65) 604-2803</a>
+            </p>       
+        </section>
+        
+    </main>
+    <footer>
+        <p><em>All rights reserved © 2025 Iviwe Booi</em></p>
+    </footer>
+    <script src="js/utils.js"></script>
+    <script src="js/handleForm.js"></script>
+</body>
+</html>
