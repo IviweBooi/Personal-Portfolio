@@ -9,3 +9,9 @@
 
 [[plugins]]
   package = "netlify-plugin-inline-env"
+  
+  [plugins.inputs]
+  # Specify which files to process
+  include = ["*.html"]
+  # Provide fallback values for environment variables
+  fallback = { EMAILJS_PUBLIC_KEY = "n2T-nnmcDJay40Qp8", EMAILJS_SERVICE_ID = "service_a2bfq95", EMAILJS_TEMPLATE_ID = "template_8itonng" }
