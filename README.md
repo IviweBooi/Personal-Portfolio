@@ -23,14 +23,14 @@ A modern, responsive personal portfolio website showcasing my skills, projects, 
 
 ## 🎯 About
 
-This portfolio website represents my journey as a software developer and final-year Computer Science student at the University of Cape Town (UCT). It showcases my technical skills, projects, certifications, and provides a professional platform for potential employers and collaborators to learn about my work.
+This portfolio website represents my journey as a software developer and final-year Computer Science student at the University of Cape Town (UCT). It showcases my technical skills, projects, and certifications, and provides a professional platform for potential employers and collaborators to learn about my work.
 
 ### Key Highlights:
 - **Modern Design**: Clean, professional interface with smooth animations
-- **Responsive Layout**: Optimized for all devices and screen sizes
+- **Responsive Layout**: Optimised for all devices and screen sizes
 - **Interactive Elements**: Custom cursor, smooth scrolling, and dynamic content
 - **Contact Integration**: Functional contact form using EmailJS
-- **Project Showcase**: Detailed project presentations with videos and descriptions
+- **Project Showcase**: Yet to show detailed project presentations with videos and descriptions
 
 ## ✨ Features
 
@@ -54,7 +54,7 @@ This portfolio website represents my journey as a software developer and final-y
 - **Resume Download**: Direct download link for my CV
 - **Social Links**: Professional social media integration
 - **Mobile Menu**: Hamburger menu for mobile navigation
-- **SEO Optimized**: Meta tags and semantic HTML structure
+- **SEO Optimised**: Meta tags and semantic HTML structure
 
 ## 🛠️ Technologies Used
 
@@ -119,7 +119,7 @@ Personal Portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/personal-portfolio.git
+   git clone https://github.com/Iviwebooi/personal-portfolio.git
    cd personal-portfolio
    ```
 
@@ -129,7 +129,7 @@ Personal Portfolio/
    # Or use a local server for development
    python -m http.server 8000
    # or
-   npx serve .
+   npx serve.
    ```
 
 3. **Customize the content**
@@ -156,7 +156,7 @@ Personal Portfolio/
    ```
 
 3. **Deploy**
-   - Netlify will automatically deploy on every push to main branch
+   - Netlify will automatically deploy on every push to the main branch
    - Your site will be available at `https://your-site-name.netlify.app`
 
 ### Manual Deployment
@@ -187,7 +187,7 @@ Personal Portfolio/
 
 4. **Test the Form**
    - Ensure emails are being sent correctly
-   - Check spam folder for test emails
+   - Check your spam folder for test emails
 
 ## 🎨 Customization
 
@@ -197,7 +197,7 @@ Personal Portfolio/
 - Update resume in `assets/files/resume.pdf`
 
 ### Styling
-- Modify colors in `css/styles.css`
+- Modify colours in `css/styles.css`
 - Update fonts and typography
 - Adjust animations and transitions
 
@@ -227,12 +227,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 - **Email**: booiiviwe4394@gmail.com
-- **LinkedIn**: [Your LinkedIn Profile]
-- **GitHub**: [Your GitHub Profile]
-- **Portfolio**: [Your Portfolio URL]
+- **LinkedIn**: [https://www.linkedin.com/in/iviwe-booi-6b467129a/]
+- **GitHub**: [https://github.com/IviweBooi]
+- **Portfolio**: [My Portfolio URL]
 
 ---
 
 ⭐ **Star this repository if you found it helpful!**
+
 
 *Built with ❤️ by Iviwe Booi* 
