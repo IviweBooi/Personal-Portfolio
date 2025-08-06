@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  
+[build.environment]
+  # These environment variables will be injected into your HTML during build
+  EMAILJS_PUBLIC_KEY = "${EMAILJS_PUBLIC_KEY}"
+  EMAILJS_SERVICE_ID = "${EMAILJS_SERVICE_ID}"
+  EMAILJS_TEMPLATE_ID = "${EMAILJS_TEMPLATE_ID}"
+
+[[plugins]]
+  package = "netlify-plugin-inline-env"

@@ -1,0 +1,380 @@
+/* ================= Tables ================== */
+@media screen and (max-width: 768px) {
+    #menu{
+        display: flex;
+        background-color: black;
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: var(--transition);
+        padding: 40px 20px;
+    }
+    #menu ul{
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+    }
+    .say-hi{
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .cursor{
+        display: none;
+    }
+    .landing-page{
+        padding: 120px 20px;
+    }
+    .landing-page h1{
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .landing-page p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .layer-blur{
+        width: 12rem;
+        top: 40%;
+        height: 0;
+        box-shadow: 0 0 600px 13px white;
+    }
+    .about-me{
+        flex-direction: column;
+        padding: 20px 40px 40px;
+    }
+    .about-me .left-div h1{
+        font-size: 60px;
+    }
+    .design-process{
+        flex-direction: column;
+    }
+    .design-process .right-div h1{
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .design-process .right-div p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .projects{
+        align-items: start;
+        padding: 60px;
+        gap: 20px;
+    }
+    .personal-projects{
+        justify-content: center;
+    }
+    .project-card{
+        width: 277px;
+        height: 160px;
+    }
+    .projects h1{
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .certs-page{
+        padding: 60px;
+    }
+    .certs-div{
+        padding: 0;
+    }
+    .certs-page .inner-div{
+        padding: 0;
+        align-items: start;
+    }
+    .certs-page .inner-div h1{
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .certs-div img{
+        height: 200px;
+    }
+    .faqs-page{
+        padding: 60px;
+    }
+    .faqs-page .inner-div{
+        padding: 0;
+        align-items: start;
+    }
+    .faqs-page .inner-div h1{
+        text-align: left;
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .faqs-page .inner-div .card-div{
+        width: 100%;
+    }
+    .contact-me h1{
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .contact-me p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .email-link{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    footer p{
+        font-size: 12px;
+        line-height: 18px;
+    
+    }
+}
+
+
+/* =================== phones =================== */
+@media screen and (max-width: 480px) {
+    .say-hi{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menu{
+        display: flex;
+        background-color: black;
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: var(--transition);
+        padding: 40px 20px;
+    }
+    #menu ul{
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+    }
+    .cursor{
+        display: none;
+    }
+    .landing-page h1{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .landing-page p{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .landing-page{
+        padding: 120px 15px;
+        height: fit-content;
+        height: 60vh;
+        justify-content: start;
+    }
+    .landing-page .buttons{
+        margin-top: 20px;
+    }
+    .about-me{
+        padding: 10px 40px;
+    }
+    .about-me .right-div{
+        padding: 40px 10px;
+    }
+    .about-me .left-div{
+        padding: 40px 10px;
+    }
+    .design-process .right-div .design-process-text{
+        align-self: start;
+    }
+    .design-process .right-div h1{
+        font-size: 44px;
+        line-height: 44px;
+        padding: 40px 5px;
+    }
+    .design-process .right-div{
+        align-items: stretch;
+        padding: 10px 0;
+    }
+    .design-process .left-div{
+        width: 100%;
+    }
+    .design-process .right-div p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .design-process .right-div .buttons{
+        flex-direction: column;
+        width: 100%;    
+    }
+    .book-a-free-call{
+        width: 90%;
+    }
+    .see-projects{
+        width: 70%
+    }
+    .projects{
+        align-items: start;
+        padding: 40px;
+        gap: 20px;
+    }
+    .personal-projects{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .project-card{
+        width: 95%;
+        height: 190px;
+    }
+    .projects h1{
+        font-size: 44px;
+        line-height: 60px;
+    }
+    .certs-page{
+        padding: 40px;
+    }
+    .certs-div{
+        padding: 0;
+    }
+    .certs-page .inner-div{
+        padding: 0;
+        align-items: start;
+    }
+    .certs-page .inner-div h1{
+        font-size: 44px;
+        line-height: 60px;
+    }
+    .certs-div img{
+        height: 120px;
+    }
+    .faqs-page{
+        padding: 40px;
+    }
+    .faqs-page .inner-div{
+        padding: 0;
+        align-items: start;
+    }
+    .faqs-page .inner-div h1{
+        text-align: left;
+        font-size: 44px;
+        line-height: 60px;
+    }
+    .faqs-page .inner-div .card-div{
+        width: 100%;
+    }
+    .contact-me{
+        padding: 40px;
+    }
+    .contact-me h1{
+        text-align: center;
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .contact-me p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .email-link{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .contact-form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-form input{
+        font-size: 13px;
+    }
+    .contact-form input::placeholder{
+        font-size: 13px;
+    }
+    .contact-form textarea{
+        font-size: 13px;
+    }
+    .contact-form textarea::placeholder{
+        font-size: 13px;
+    }
+    
+    footer p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .form-feedback{
+        width: 350px;
+    }
+}
+
+
+
+@media screen and (max-width: 350px) { 
+    .say-hi{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        background-color: black;
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: var(--transition);
+        padding: 40px 20px;
+    }
+    #menu ul{
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .cursor{
+        display: none;
+    }
+    .landing-page h1{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .landing-page p{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .landing-page{
+        padding: 120px 15px;
+        height: fit-content;
+        padding: 120px 0px;
+    }
+    .landing-page .buttons{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .see-my-work{
+        width: 90%;
+    }
+    .get-in-touch{
+        width: 70%;
+        padding: 10px 5px;
+        gap: 15px;
+    }
+    .about-me .right-div{
+        padding: 40px 10px;
+    }
+    .about-me .left-div{
+        padding: 40px 10px;
+    }
+    .about-me .left-div h1{
+        font-size: 40px;
+    }
+
+    .form-feedback{
+            width: 300px;
+        }
+}
