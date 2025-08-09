@@ -955,7 +955,8 @@ header .right-div{
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-.contact-form input{
+.contact-form input,
+.contact-form select{
     font-family: var(--body-font);
     font-size: 16px;
     font-weight: 200;
@@ -968,7 +969,8 @@ header .right-div{
     width: 100%;
 }
 
-.contact-form input::placeholder{
+.contact-form input::placeholder,
+.contact-form select::placeholder{
     color: rgba(255,255,255,0.3);
     font-family: var(--body-font);
     font-size: 14px;
@@ -1044,8 +1046,10 @@ header .right-div{
 
 
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus,
 .contact-form input:active,
+.contact-form select:active,
 .contact-form textarea:active{
     background-color: black;
 }
@@ -1056,6 +1060,45 @@ header .right-div{
 
 .contact-form button.enabled:active{
     background-color: rgba(179, 255, 50, 0.5);
+}
+
+/* ===================== Form Validation Styles ====================== */
+.contact-form input.valid,
+.contact-form textarea.valid {
+    border-color: rgba(79, 255, 50, 0.8);
+    box-shadow: 0 0 5px rgba(79, 255, 50, 0.3);
+}
+
+.contact-form input.invalid,
+.contact-form textarea.invalid {
+    border-color: rgba(255, 50, 50, 0.8);
+    box-shadow: 0 0 5px rgba(255, 50, 50, 0.3);
+}
+
+/* Loading state for submit button */
+.contact-form button.loading {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+    position: relative;
+}
+
+.contact-form button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
 }
 
 .contact-info a{

@@ -135,8 +135,11 @@ toggler.addEventListener('click', () => {
 });
 
 
-const closeBtn = document.querySelector('.close-btn');
-closeBtn.addEventListener('click', () => {
-    document.querySelector('#success').style.display = 'none';
-    document.querySelector('#error').style.display = 'none';
+// Handle close buttons for both success and error modals
+const closeBtns = document.querySelectorAll('.close-btn');
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('#success').style.display = 'none';
+        document.querySelector('#error').style.display = 'none';
+    });
 });
