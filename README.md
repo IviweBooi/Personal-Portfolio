@@ -6,7 +6,7 @@ A modern, responsive personal portfolio website showcasing my skills, projects, 
 
 ## 🌟 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.netlify.app)
+[View Live Portfolio](https://iviwebooiportfolio.netlify.app)
 
 ## 📋 Table of Contents
 
@@ -266,7 +266,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Email**: booiiviwe4394@gmail.com
 - **LinkedIn**: [https://www.linkedin.com/in/iviwe-booi-6b467129a/]
 - **GitHub**: [https://github.com/IviweBooi]
-- **Portfolio**: [My Portfolio URL]
+- **Portfolio**: [https://iviwebooiportfolio.netlify.app]
 
 ---
 
@@ -274,3 +274,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 *Built with ❤️ by Iviwe Booi* 
+
