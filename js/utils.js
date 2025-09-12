@@ -205,7 +205,21 @@ const fallbackImages = [
 ];
 
 projectVideos.forEach((video, index) => {
+    const projectMedia = video.closest('.project-media');
+    
+    // Create shimmer loader element
+    const shimmerLoader = document.createElement('div');
+    shimmerLoader.className = 'shimmer-loader';
+    projectMedia.appendChild(shimmerLoader);
+    
+    // Set initial loading state
+    projectMedia.classList.add('loading');
+    
     video.addEventListener('error', () => {
+        // Remove shimmer and loading state on error
+        projectMedia.classList.remove('loading');
+        projectMedia.classList.add('loaded');
+        
         // Create fallback image element
         const img = document.createElement('img');
         img.src = fallbackImages[index] || 'assets/images/anonymous.jpg';
@@ -218,12 +232,21 @@ projectVideos.forEach((video, index) => {
         video.parentNode.replaceChild(img, video);
     });
     
-    // Add loading state
+    // Show shimmer during loading
     video.addEventListener('loadstart', () => {
-        video.style.opacity = '0.5';
+        projectMedia.classList.add('loading');
+        projectMedia.classList.remove('loaded');
     });
     
+    // Hide shimmer when video can play
     video.addEventListener('canplay', () => {
-        video.style.opacity = '1';
+        projectMedia.classList.remove('loading');
+        projectMedia.classList.add('loaded');
+    });
+    
+    // Also handle when video is fully loaded
+    video.addEventListener('loadeddata', () => {
+        projectMedia.classList.remove('loading');
+        projectMedia.classList.add('loaded');
     });
 });
