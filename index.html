@@ -13,17 +13,19 @@
     </script>
     <script type="text/javascript">
         // Set environment variables for production (Netlify will inject these)
-        window.EMAILJS_PUBLIC_KEY = '${EMAILJS_PUBLIC_KEY}' !== '${EMAILJS_PUBLIC_KEY}' ? '${EMAILJS_PUBLIC_KEY}' : undefined;
-        window.EMAILJS_SERVICE_ID = '${EMAILJS_SERVICE_ID}' !== '${EMAILJS_SERVICE_ID}' ? '${EMAILJS_SERVICE_ID}' : undefined;
-        window.EMAILJS_TEMPLATE_ID = '${EMAILJS_TEMPLATE_ID}' !== '${EMAILJS_TEMPLATE_ID}' ? '${EMAILJS_TEMPLATE_ID}' : undefined;
+        window.EMAILJS_PUBLIC_KEY = '%EMAILJS_PUBLIC_KEY%' || undefined;
+        window.EMAILJS_SERVICE_ID = '%EMAILJS_SERVICE_ID%' || undefined;
+        window.EMAILJS_TEMPLATE_ID = '%EMAILJS_TEMPLATE_ID%' || undefined;
+        
+        // Debug logging for production
+        console.log('EmailJS Config Check:');
+        console.log('Public Key:', window.EMAILJS_PUBLIC_KEY ? 'Set' : 'Missing');
+        console.log('Service ID:', window.EMAILJS_SERVICE_ID ? 'Set' : 'Missing');
+        console.log('Template ID:', window.EMAILJS_TEMPLATE_ID ? 'Set' : 'Missing');
         
         // For local development: Load from .env.local if environment variables are not set
-        // Note: In a real application, you would use a build tool to inject these
-        // For now, manually replace the values in .env.local file
         if (!window.EMAILJS_PUBLIC_KEY) {
-            // These will be undefined in local development
-            // Replace the values in .env.local file with your actual EmailJS credentials
-            console.log('Environment variables not found. Please set your EmailJS credentials in .env.local file.');
+            console.log('Environment variables not found. For local testing, temporarily add your keys here.');
         }
     </script>
     <script src="js/constants.js"></script>
