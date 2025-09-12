@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="icon" type="image/png" href="assets/images/myLogo.png">
+    <link rel="icon" type="image/png" id="favicon">
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -16,14 +17,16 @@
         window.EMAILJS_SERVICE_ID = '${EMAILJS_SERVICE_ID}' !== '${EMAILJS_SERVICE_ID}' ? '${EMAILJS_SERVICE_ID}' : undefined;
         window.EMAILJS_TEMPLATE_ID = '${EMAILJS_TEMPLATE_ID}' !== '${EMAILJS_TEMPLATE_ID}' ? '${EMAILJS_TEMPLATE_ID}' : undefined;
     </script>
+    <script src="js/constants.js"></script>
     <script src="js/config.js"></script>
+    <script src="js/init.js"></script>
 </head>
 <body>
     <header>
         <div class="left-div">
             <a href="index.html" style="text-decoration: none;">
                 <nav id="logo">
-                    <h2>IB</h2>
+                    <h2 id="logo-text">IB</h2>
                 </nav>
             </a>
         </div>
@@ -37,9 +40,9 @@
                     <li class="contact-btn">Contact</li>
                 </ul>
             </nav>
-            <a href="mailto:booiiviwe4394@gmail.com" style="text-decoration: none;"><button class="say-hi">
-                Say Hi
-                <img class="hand" src="assets/icons/wave.svg" alt="Arrow icon">
+            <a id="email-link" style="text-decoration: none;"><button class="say-hi" id="say-hi-btn">
+                <span id="say-hi-text">Say Hi</span>
+                <img class="hand" id="wave-icon" alt="Wave icon">
             </button></a>
             <div class="menu-icon">
                 <input type="checkbox" class="toggler">
@@ -49,7 +52,7 @@
             </div>
         </div>
     </header>
-    <img class="image-gradient" src="assets/images/gradient.png" alt="Gradient image">
+    <img class="image-gradient" id="gradient-image" alt="Gradient image">
     <div class="layer-blur"></div>
     <div class="cursor" id="cursor"></div>
     
@@ -59,21 +62,21 @@
         <section class="landing-page">
             <div class="name-surname">
                 <div class="circle"></div>
-                <p>Hey! I'm Iviwe Booi</p>
+                <p id="greeting-text">Hey! I'm Iviwe Booi</p>
             </div>
-            <h1>Building the Future, One Line of Code at a Time.</h1>
-            <p class="description">Software Dev. Passionate about crafting innovative solutions with modern technologies.</p>
+            <h1 id="main-title">Building the Future, One Line of Code at a Time.</h1>
+            <p class="description" id="main-description">Software Dev. Passionate about crafting innovative solutions with modern technologies.</p>
             <div class="buttons">
-                <button class="see-my-work">See My Work</button>
-                <a href="assets/files/IviweBooiResume.pdf" style="text-decoration: none;" download>
+                <button class="see-my-work" id="see-work-btn">See My Work</button>
+                <a id="resume-link" style="text-decoration: none;" download>
                     <button class="get-my-resume">
                         <div class="circle"></div>
-                        Get My Resume
-                        <img src="assets/icons/download.svg" alt="Arrow icon" height="25">
+                        <span id="resume-text">Get My Resume</span>
+                        <img id="download-icon" alt="Download icon" height="25">
                     </button>
                 </a>
             </div>
-            <img class="arrow-down" src="assets/icons/arrow-down.svg" alt="Arrow icon">
+            <img class="arrow-down" id="arrow-down-icon" alt="Arrow icon">
         </section>
 
         <!-- About me page-->
@@ -261,11 +264,29 @@
                 <a class="instagram" href="https://www.instagram.com/iviiwebooi/"><img src="assets/icons/insta.svg" alt="Instagram icon"></a>
             </div>
             <form class="contact-form">
-                <input class="full-name" name="name" type="text" placeholder="Full Name"  aria-label="Full Name" autocomplete="on" required>
-                <input class="email" name="email" type="email" placeholder="Email" aria-label="Email" autocomplete="on" required>
-                <input class="phone" name="phone" type="tel" placeholder="Phone" aria-label="Phone" autocomplete="on" required>
-                <input class="website-niche" name="website-niche" type="text" placeholder="Your Website Niche" aria-label="Website Niche" autocomplete="on" autocorrect="on" required>
-                <textarea class="message" name="message" placeholder="Tell me more about your needs..." aria-label="Tell me more about your needs" autocorrect="on" required></textarea>
+                <div class="input-group">
+                    <input class="full-name" name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="on" required minlength="2" maxlength="50">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                <div class="input-group">
+                    <input class="email" name="email" type="email" placeholder="Email" aria-label="Email" autocomplete="on" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="input-group">
+                    <input class="phone" name="phone" type="tel" placeholder="Phone" aria-label="Phone" autocomplete="on" required minlength="10" maxlength="15">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                <div class="input-group">
+                    <input class="website-niche" name="website-niche" type="text" placeholder="Your Website Niche" aria-label="Website Niche" autocomplete="on" autocorrect="on" required minlength="3" maxlength="100">
+                    <div class="error-message" id="niche-error"></div>
+                </div>
+                <div class="input-group textarea-group">
+                    <textarea class="message" name="message" placeholder="Tell me more about your needs (minimum 10 characters, maximum 500)..." aria-label="Tell me more about your needs" autocorrect="on" required minlength="10" maxlength="500"></textarea>
+                    <div class="textarea-info">
+                        <span class="char-count">0/500</span>
+                    </div>
+                    <div class="error-message" id="message-error"></div>
+                </div>
                 <button id="submit-btn" class="disabled" type="submit" aria-label="Submit" >Submit</button>
             </form>
             <p class="contact-info">
@@ -283,6 +304,7 @@
         <p><em>All rights reserved © 2025 Iviwe Booi</em></p>
     </footer>
     <script src="js/utils.js"></script>
+    <script src="js/formValidation.js"></script>
     <script src="js/handleForm.js"></script>
 </body>
 </html>

@@ -79,18 +79,32 @@ document.querySelector('.FAQs-btn').addEventListener('click', () => {
     });
 });
 
-// Event handler for the more button to see the question
-document.querySelector('.plus-icon').addEventListener('click', function() {
-    document.querySelector('.collapsible-content').style.display = 'flex';
-    this.style.display = 'none';
-    document.querySelector('.minus-icon').style.display = 'block';
+// Event handlers for FAQ accordion functionality
+const plusIcons = document.querySelectorAll('.plus-icon');
+const minusIcons = document.querySelectorAll('.minus-icon');
+
+plusIcons.forEach((plusIcon, index) => {
+    plusIcon.addEventListener('click', function() {
+        const cardDiv = this.closest('.card-div');
+        const collapsibleContent = cardDiv.querySelector('.collapsible-content');
+        const minusIcon = cardDiv.querySelector('.minus-icon');
+        
+        collapsibleContent.style.display = 'flex';
+        this.style.display = 'none';
+        minusIcon.style.display = 'block';
+    });
 });
 
-// Event handler for the less button to hide the question
-document.querySelector('.minus-icon').addEventListener('click', function() {
-    document.querySelector('.collapsible-content').style.display = 'none';
-    document.querySelector('.plus-icon').style.display = 'block';
-    this.style.display = 'none';
+minusIcons.forEach((minusIcon, index) => {
+    minusIcon.addEventListener('click', function() {
+        const cardDiv = this.closest('.card-div');
+        const collapsibleContent = cardDiv.querySelector('.collapsible-content');
+        const plusIcon = cardDiv.querySelector('.plus-icon');
+        
+        collapsibleContent.style.display = 'none';
+        plusIcon.style.display = 'block';
+        this.style.display = 'none';
+    });
 });
 
 // Event handler for the see-my-work button
@@ -119,19 +133,22 @@ const menu = document.querySelector('#menu');
 const toggler = document.querySelector('.toggler');
 
 // Add an event listener to the toggler
-toggler.addEventListener('click', () => {
-    // Toggle the aria-checked attribute
-    const isChecked = toggler.getAttribute('aria-checked') === 'true';
-    
-    // Update the aria-checked attribute
-    toggler.setAttribute('aria-checked', !isChecked);
-
+toggler.addEventListener('change', () => {
     // Apply the transform based on the checked state
-    if (!isChecked) {
+    if (toggler.checked) {
         menu.style.transform = 'scaleY(1)'; // Show the menu
     } else {
         menu.style.transform = 'scaleY(0)'; // Hide the menu
     }
+});
+
+// Close mobile menu when clicking on navigation items
+const navItems = document.querySelectorAll('#menu ul li');
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        toggler.checked = false;
+        menu.style.transform = 'scaleY(0)';
+    });
 });
 
 
@@ -141,5 +158,69 @@ closeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelector('#success').style.display = 'none';
         document.querySelector('#error').style.display = 'none';
+    });
+});
+
+// Handle "Book a Free Call" button - scroll to contact section
+document.querySelector('.book-a-free-call').addEventListener('click', () => {
+    document.querySelector('.contact-me').scrollIntoView({ 
+        behavior: 'smooth'
+    });
+});
+
+// Handle "View Project" buttons - add project URLs
+const projectUrls = [
+    'https://github.com/IviweBooi/weather-app', // Weather App
+    'https://github.com/IviweBooi/contacts-app', // Contacts App  
+    'https://github.com/IviweBooi/superhero-app', // Superhero App
+    'https://github.com/IviweBooi/pine-city-zoo', // Pine City Zoo App
+    'https://github.com/IviweBooi/calculator-app' // Calculator App
+];
+
+const viewProjectBtns = document.querySelectorAll('.view-project');
+viewProjectBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        if (projectUrls[index]) {
+            window.open(projectUrls[index], '_blank');
+        } else {
+            // Fallback - scroll to contact section if no URL available
+            document.querySelector('.contact-me').scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Handle video loading errors and add fallback images
+const projectVideos = document.querySelectorAll('.project-card video');
+const fallbackImages = [
+    'assets/images/weather-app.png',
+    'assets/images/contacts.png', 
+    'assets/images/anonymous.jpg', // Superhero app fallback
+    'assets/images/anonymous.jpg', // Zoo app fallback
+    'assets/images/calculator-pic.jpeg'
+];
+
+projectVideos.forEach((video, index) => {
+    video.addEventListener('error', () => {
+        // Create fallback image element
+        const img = document.createElement('img');
+        img.src = fallbackImages[index] || 'assets/images/anonymous.jpg';
+        img.alt = `Project ${index + 1} Preview`;
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        
+        // Replace video with image
+        video.parentNode.replaceChild(img, video);
+    });
+    
+    // Add loading state
+    video.addEventListener('loadstart', () => {
+        video.style.opacity = '0.5';
+    });
+    
+    video.addEventListener('canplay', () => {
+        video.style.opacity = '1';
     });
 });

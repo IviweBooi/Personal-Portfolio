@@ -1,0 +1,163 @@
+/* CSS Variables to replace hardcoded values */
+/* This improves maintainability and follows best coding practices */
+
+:root {
+    /* Colors */
+    --color-primary: rgba(179, 255, 50, 1);
+    --color-primary-hover: rgba(179, 255, 79, 1);
+    --color-primary-transparent: rgba(179, 255, 50, 0.5);
+    --color-white: #fff;
+    --color-black: #000;
+    --color-dark-gray: #0d0d0d;
+    --color-medium-gray: rgb(48,48,48);
+    --color-light-gray: rgba(100,100,100,0.1);
+    --color-white-transparent: rgba(255,255,255,0.1);
+    --color-white-semi: rgba(255,255,255,0.2);
+    --color-white-border: rgba(255,255,255,0.5);
+    --color-white-full-border: rgba(255,255,255,1);
+    --color-white-backdrop: rgba(255,255,255,0.8);
+    --color-black-backdrop: rgba(0,0,0,0.7);
+    --color-success: rgba(79, 255, 50, 0.8);
+    --color-error: rgba(255, 50, 50, 0.8);
+    --color-success-glow: rgba(79, 255, 50, 0.3);
+    --color-error-glow: rgba(255, 50, 50, 0.3);
+    --color-placeholder: rgba(255,255,255,0.3);
+    
+    /* Typography */
+    --font-size-xs: 12px;
+    --font-size-sm: 13px;
+    --font-size-md: 14px;
+    --font-size-base: 15px;
+    --font-size-lg: 16px;
+    --font-size-xl: 18px;
+    --font-size-2xl: 25px;
+    --font-size-3xl: 35px;
+    --font-size-4xl: 44px;
+    --font-size-5xl: 50px;
+    --font-size-6xl: 60px;
+    --font-size-7xl: 70px;
+    --font-size-8xl: 80px;
+    --font-size-9xl: 90px;
+    
+    --line-height-xs: 15px;
+    --line-height-sm: 18px;
+    --line-height-md: 20px;
+    --line-height-lg: 24px;
+    --line-height-xl: 44px;
+    --line-height-2xl: 45px;
+    --line-height-3xl: 50px;
+    --line-height-4xl: 60px;
+    --line-height-5xl: 65px;
+    --line-height-6xl: 70px;
+    --line-height-7xl: 80px;
+    --line-height-8xl: 90px;
+    --line-height-9xl: 100px;
+    --line-height-10xl: 110px;
+    
+    --letter-spacing-tight: -1px;
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 8px;
+    --spacing-md: 10px;
+    --spacing-lg: 15px;
+    --spacing-xl: 20px;
+    --spacing-2xl: 30px;
+    --spacing-3xl: 40px;
+    --spacing-4xl: 50px;
+    --spacing-5xl: 60px;
+    --spacing-6xl: 120px;
+    
+    /* Border Radius */
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 21px;
+    
+    /* Dimensions */
+    --circle-sm: 8px;
+    --circle-md: 18px;
+    --circle-lg: 30px;
+    --circle-xl: 40px;
+    --circle-2xl: 50px;
+    --circle-3xl: 60px;
+    
+    --width-xs: 16px;
+    --width-sm: 20px;
+    --width-md: 50px;
+    --width-lg: 60px;
+    --width-xl: 277px;
+    --width-2xl: 300px;
+    --width-3xl: 350px;
+    --width-4xl: 370px;
+    --width-5xl: 20rem;
+    
+    --height-xs: 2px;
+    --height-sm: 16px;
+    --height-md: 18px;
+    --height-lg: 20px;
+    --height-xl: 30px;
+    --height-2xl: 40px;
+    --height-3xl: 50px;
+    --height-4xl: 60px;
+    --height-5xl: 100px;
+    --height-6xl: 120px;
+    --height-7xl: 160px;
+    --height-8xl: 190px;
+    --height-9xl: 200px;
+    --height-10xl: 240px;
+    --height-11xl: 300px;
+    --height-12xl: 1200px;
+    
+    /* Shadows */
+    --shadow-glow: 0 0 700px 15px white;
+    --shadow-glow-sm: 0 0 600px 13px white;
+    --shadow-white-glow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.9);
+    --shadow-white-sm: 0 0 10px rgba(255,255,255,0);
+    --shadow-success: 0 0 5px rgba(79, 255, 50, 0.3);
+    --shadow-error: 0 0 5px rgba(255, 50, 50, 0.3);
+    --shadow-card: 0px 1px 5px rgba(0,0,0,0.6);
+    
+    /* Backdrop Filters */
+    --backdrop-blur-sm: blur(10px);
+    --backdrop-blur-md: blur(50px);
+    
+    /* Borders */
+    --border-white-thin: 1px solid rgba(255,255,255,0.2);
+    --border-white-medium: 1px solid rgba(255,255,255,0.5);
+    --border-white-thick: 1px solid rgba(255,255,255,1);
+    --border-white-top: 3px solid rgba(255,255,255,1);
+    --border-white-bottom: 3px solid rgba(255,255,255,1);
+    --border-transparent: 2px solid transparent;
+    --border-white-spinner: 2px solid #fff;
+    
+    /* Gradients */
+    --gradient-dark: linear-gradient(to right, rgb(48,48,48) 0%, black 30%, black 100%);
+    --gradient-dark-alt: linear-gradient(to right, rgb(48,48,48) 0%, black 40%, black 100%);
+    --gradient-dark-reverse: linear-gradient(to right,black 0%, black 30%, rgb(48,48,48) 100%);
+    --gradient-white: linear-gradient(to right, rgba(255,255,255,0.8) 0%, black 35%, black 100%);
+    --gradient-white-alt: linear-gradient(to right, rgba(255,255,255,1) 0%, black 50%, black 100%);
+    --gradient-white-strong: linear-gradient(to right, rgba(255,255,255,0.8) 0%, black 60%, black 100%);
+    
+    /* Transforms */
+    --transform-left: translateX(-50px);
+    --transform-right: translateX(50px);
+    --transform-up: translateY(-10px);
+    
+    /* Positions */
+    --position-top-sm: -1px;
+    --position-top-md: -10px;
+    --position-top-lg: 10px;
+    --position-top-xl: 60px;
+    --position-left-sm: -1px;
+    --position-left-md: 0px;
+    --position-right-sm: -1px;
+    --position-right-md: 10px;
+    --position-right-lg: 15px;
+    --position-bottom-sm: -1px;
+    
+    /* Media Query Breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-small: 350px;
+}
