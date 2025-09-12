@@ -4,9 +4,9 @@
 
 const CONFIG = {
     // These will be set dynamically in index.html
-    EMAILJS_PUBLIC_KEY: window.EMAILJS_PUBLIC_KEY || 'n2T-nnmcDJay40Qp8',
-    EMAILJS_SERVICE_ID: window.EMAILJS_SERVICE_ID || 'service_a2bfq95',
-    EMAILJS_TEMPLATE_ID: window.EMAILJS_TEMPLATE_ID || 'template_8itonng'
+    EMAILJS_PUBLIC_KEY: window.EMAILJS_PUBLIC_KEY || '',
+    EMAILJS_SERVICE_ID: window.EMAILJS_SERVICE_ID || '',
+    EMAILJS_TEMPLATE_ID: window.EMAILJS_TEMPLATE_ID || ''
 };
 
 // Make config available globally

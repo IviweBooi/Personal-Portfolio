@@ -16,6 +16,15 @@
         window.EMAILJS_PUBLIC_KEY = '${EMAILJS_PUBLIC_KEY}' !== '${EMAILJS_PUBLIC_KEY}' ? '${EMAILJS_PUBLIC_KEY}' : undefined;
         window.EMAILJS_SERVICE_ID = '${EMAILJS_SERVICE_ID}' !== '${EMAILJS_SERVICE_ID}' ? '${EMAILJS_SERVICE_ID}' : undefined;
         window.EMAILJS_TEMPLATE_ID = '${EMAILJS_TEMPLATE_ID}' !== '${EMAILJS_TEMPLATE_ID}' ? '${EMAILJS_TEMPLATE_ID}' : undefined;
+        
+        // For local development: Load from .env.local if environment variables are not set
+        // Note: In a real application, you would use a build tool to inject these
+        // For now, manually replace the values in .env.local file
+        if (!window.EMAILJS_PUBLIC_KEY) {
+            // These will be undefined in local development
+            // Replace the values in .env.local file with your actual EmailJS credentials
+            console.log('Environment variables not found. Please set your EmailJS credentials in .env.local file.');
+        }
     </script>
     <script src="js/constants.js"></script>
     <script src="js/config.js"></script>
