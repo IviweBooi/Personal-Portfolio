@@ -168,28 +168,64 @@ document.querySelector('.book-a-free-call').addEventListener('click', () => {
     });
 });
 
-// Handle "View Project" buttons - add project URLs
-const projectUrls = [
-    'https://github.com/IviweBooi/weather-app', // Weather App
-    'https://github.com/IviweBooi/contacts-app', // Contacts App  
-    'https://github.com/IviweBooi/superhero-app', // Superhero App
-    'https://github.com/IviweBooi/pine-city-zoo', // Pine City Zoo App
-    'https://github.com/IviweBooi/calculator-app' // Calculator App
+// Project data with live URLs and GitHub links
+const projectData = [
+    {
+        title: 'Weather App',
+        liveUrl: 'https://weather-app-iviwe.netlify.app', // Replace with actual live URL
+        githubUrl: 'https://github.com/IviweBooi/weather-app',
+        description: 'A responsive weather application that provides real-time weather data with beautiful animations and intuitive user interface.'
+    },
+    {
+        title: 'Contacts Manager',
+        liveUrl: 'https://contacts-manager-iviwe.netlify.app', // Replace with actual live URL
+        githubUrl: 'https://github.com/IviweBooi/contacts-app',
+        description: 'A comprehensive contact management system with CRUD operations, search functionality, and modern UI design.'
+    },
+    {
+        title: 'Superhero Database',
+        liveUrl: 'https://superhero-database-iviwe.netlify.app', // Replace with actual live URL
+        githubUrl: 'https://github.com/IviweBooi/superhero-app',
+        description: 'An interactive superhero database with detailed character information, search filters, and engaging visual design.'
+    },
+    {
+        title: 'Pine City Zoo',
+        liveUrl: 'https://pine-city-zoo-iviwe.netlify.app', // Replace with actual live URL
+        githubUrl: 'https://github.com/IviweBooi/pine-city-zoo',
+        description: 'A virtual zoo experience with interactive animal exhibits, educational content, and immersive navigation.'
+    },
+    {
+        title: 'Calculator App',
+        liveUrl: 'https://calculator-app-iviwe.netlify.app', // Replace with actual live URL
+        githubUrl: 'https://github.com/IviweBooi/calculator-app',
+        description: 'A sleek calculator application with advanced mathematical operations, memory functions, and responsive design.'
+    }
 ];
 
-const viewProjectBtns = document.querySelectorAll('.view-project');
-viewProjectBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        if (projectUrls[index]) {
-            window.open(projectUrls[index], '_blank');
-        } else {
-            // Fallback - scroll to contact section if no URL available
-            document.querySelector('.contact-me').scrollIntoView({ 
-                behavior: 'smooth'
-            });
-        }
-    });
+// Handle live app links
+const liveLinks = document.querySelectorAll('.live-link');
+liveLinks.forEach((link, index) => {
+    if (projectData[index] && projectData[index].liveUrl) {
+        link.href = projectData[index].liveUrl;
+    } else {
+        // If no live URL, disable the link and show coming soon
+        link.href = '#';
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Live demo coming soon!');
+        });
+    }
 });
+
+// Handle GitHub links (already set in HTML, but we can update them here if needed)
+const githubLinks = document.querySelectorAll('.github-link');
+githubLinks.forEach((link, index) => {
+    if (projectData[index] && projectData[index].githubUrl) {
+        link.href = projectData[index].githubUrl;
+    }
+});
+
+
 
 // Handle video loading errors and add fallback images
 const projectVideos = document.querySelectorAll('.project-card video');

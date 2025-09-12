@@ -72,7 +72,24 @@
     }
     .project-card{
         width: 277px;
-        height: 160px;
+        min-height: 350px;
+    }
+    
+    .project-media{
+        height: 150px;
+    }
+    
+    .project-info{
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .project-title{
+        font-size: 16px;
+    }
+    
+    .project-description{
+        font-size: 13px;
     }
     .projects h1{
         font-size: 50px;
@@ -232,8 +249,28 @@
     }
     .project-card{
         width: 95%;
-        height: 190px;
+        min-height: 380px;
     }
+    
+    .project-media{
+        height: 180px;
+    }
+    
+    .project-info{
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .project-title{
+        font-size: 16px;
+    }
+    
+    .project-description{
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+
     .projects h1{
         font-size: 44px;
         line-height: 60px;
