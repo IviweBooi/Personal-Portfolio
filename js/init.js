@@ -108,7 +108,77 @@ function initializeNavigation() {
             li.textContent = item.text;
             navMenu.appendChild(li);
         });
+        
+        // Add smooth scrolling event listeners after creating navigation items
+        addNavigationEventListeners();
     }
+}
+
+function addNavigationEventListeners() {
+    // Event handler for the About button
+    const aboutBtn = document.querySelector('.about-btn');
+    if (aboutBtn) {
+        aboutBtn.addEventListener('click', () => {
+            document.querySelector('.about-me').scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Event handler for the Projects button
+    const projectsBtn = document.querySelector('.projects-btn');
+    if (projectsBtn) {
+        projectsBtn.addEventListener('click', () => {
+            document.querySelector('.projects').scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Event handler for the Contact button
+    const contactBtn = document.querySelector('.contact-btn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', () => {
+            document.querySelector('.contact-me').scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Event handler for the FAQs button
+    const faqsBtn = document.querySelector('.FAQs-btn');
+    if (faqsBtn) {
+        faqsBtn.addEventListener('click', () => {
+            document.querySelector('.faqs-page').scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Event handler for the Certs button
+    const certsBtn = document.querySelector('.certs-btn');
+    if (certsBtn) {
+        certsBtn.addEventListener('click', () => {
+            document.querySelector('.certs-page').scrollIntoView({ 
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Close mobile menu when clicking on navigation items (only on mobile)
+    const navItems = document.querySelectorAll('#menu ul li');
+    const toggler = document.querySelector('.toggler');
+    const menu = document.querySelector('#menu');
+    
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Only close menu if toggler is checked (mobile menu is open)
+            if (toggler && menu && toggler.checked) {
+                toggler.checked = false;
+                menu.style.transform = 'scaleY(0)';
+            }
+        });
+    });
 }
 
 function initializeAboutSection() {

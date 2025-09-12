@@ -51,33 +51,7 @@ document.querySelector('.arrow-down').addEventListener('click', () => {
 });
 
 
-// Event handler for the About button
-document.querySelector('.about-btn').addEventListener('click', () => {
-    document.querySelector('.about-me').scrollIntoView({ 
-        behavior: 'smooth' // Smooth scrolling
-    });
-});
 
-// Event handler for the Projects button
-document.querySelector('.projects-btn').addEventListener('click', () => {
-    document.querySelector('.projects').scrollIntoView({ 
-        behavior: 'smooth' // Smooth scrolling
-    });
-});
-
-// Event handler for the Contact button
-document.querySelector('.contact-btn').addEventListener('click', () => {
-    document.querySelector('.contact-me').scrollIntoView({ 
-        behavior: 'smooth' // Smooth scrolling
-    });
-});
-
-// Event handler for the FAQs button
-document.querySelector('.FAQs-btn').addEventListener('click', () => {
-    document.querySelector('.faqs-page').scrollIntoView({ 
-        behavior: 'smooth' // Smooth scrolling
-    });
-});
 
 // Event handlers for FAQ accordion functionality
 const plusIcons = document.querySelectorAll('.plus-icon');
@@ -142,14 +116,7 @@ toggler.addEventListener('change', () => {
     }
 });
 
-// Close mobile menu when clicking on navigation items
-const navItems = document.querySelectorAll('#menu ul li');
-navItems.forEach(item => {
-    item.addEventListener('click', () => {
-        toggler.checked = false;
-        menu.style.transform = 'scaleY(0)';
-    });
-});
+
 
 
 // Handle close buttons for both success and error modals
