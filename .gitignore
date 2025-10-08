@@ -12,22 +12,6 @@ yarn.lock
 .env.development.local
 .env.test.local
 .env.production.local
-*.env
-
-# Configuration files with sensitive data
-config.local.js
-*config.local.*
-*.config.local.*
-
-# Netlify
-.netlify/
-
-# API keys and secrets
-*secret*
-*key*
-*token*
-!**/assets/**
-!**/icons/**
 
 # IDE and Editor files
 .vscode/
@@ -164,4 +148,4 @@ emailjs-config.js
 assets/videos/*.mp4
 assets/videos/*.mov
 assets/videos/*.avi
-assets/videos/*.mkv
+assets/videos/*.mkv 

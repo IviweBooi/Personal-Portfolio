@@ -890,7 +890,7 @@ header .right-div{
 }
 
 .project-media .shimmer-loader::before {
-    content: '';
+    content: 'Loading video...';
     z-index: 2;
     position: relative;
 }

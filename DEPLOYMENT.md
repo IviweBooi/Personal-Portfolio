@@ -68,35 +68,6 @@ Value: your_new_template_id_here
 
 ## Troubleshooting
 
-### "Email service is not properly configured" Error
-
-**This error means environment variables aren't being loaded properly.**
-
-**Step 1: Check Console Logs**
-1. Open your deployed site
-2. Press F12 to open Developer Tools
-3. Go to Console tab
-4. Look for "EmailJS Config Check" logs
-5. Should show "Set" for all three variables
-
-**Step 2: Verify Netlify Variables**
-1. Go to Netlify Dashboard → Site Settings → Environment Variables
-2. Ensure you have exactly these three variables:
-   - `EMAILJS_PUBLIC_KEY`
-   - `EMAILJS_SERVICE_ID` 
-   - `EMAILJS_TEMPLATE_ID`
-3. Variable names must match EXACTLY (case-sensitive)
-4. No quotes around values
-
-**Step 3: Force Redeploy**
-1. After adding/updating variables, trigger a new deployment
-2. Go to Deploys tab → Trigger deploy → Deploy site
-
-**Step 4: Test EmailJS Credentials**
-1. Log into [EmailJS Dashboard](https://dashboard.emailjs.com/)
-2. Test your service and template work there
-3. Verify the IDs match what you put in Netlify
-
 ### Contact Form Not Working?
 1. Check browser console for errors
 2. Verify environment variables are set in Netlify
