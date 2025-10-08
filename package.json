@@ -1,0 +1,16 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website with contact form",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build-script.js",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": ["portfolio", "website", "emailjs", "contact-form"],
+  "author": "Iviwe Booi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
