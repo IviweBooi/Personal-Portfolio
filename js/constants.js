@@ -15,7 +15,7 @@ const CONSTANTS = {
 
     // File Paths
     PATHS: {
-        RESUME: 'assets/files/IviweBooiResume.pdf',
+        RESUME: 'assets/files/Iviwe_Booi_Resume.pdf',
         LOGO: 'assets/images/myLogo.png',
         GRADIENT: 'assets/images/gradient.png',
         DESIGN_IMAGE: 'assets/images/design.jpg',
