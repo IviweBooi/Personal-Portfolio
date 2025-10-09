@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://iviwebooi.co.za/sitemap.xml
+
+# Disallow crawling of build files and scripts (optional)
+Disallow: /build-script.js
+Disallow: /package.json
+Disallow: /netlify.toml
+
+# Allow crawling of important assets
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1

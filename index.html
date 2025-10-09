@@ -3,7 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Iviwe Booi - Full Stack Developer & Software Engineer Portfolio</title>
+    <meta name="description" content="Iviwe Booi is a skilled Full Stack Developer and Software Engineer specializing in HTML, CSS, JavaScript, Java, and Python. View my portfolio of innovative web applications and projects.">
+    <meta name="keywords" content="Iviwe Booi, Full Stack Developer, Software Engineer, Web Developer, JavaScript, Python, Java, HTML, CSS, Portfolio, Cape Town Developer">
+    <meta name="author" content="Iviwe Booi">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://iviwebooi.co.za/">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Iviwe Booi - Full Stack Developer & Software Engineer">
+    <meta property="og:description" content="Skilled Full Stack Developer specializing in modern web technologies. View my portfolio of innovative applications and projects.">
+    <meta property="og:image" content="https://iviwebooi.co.za/assets/images/me.jpeg">
+    <meta property="og:url" content="https://iviwebooi.co.za/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Iviwe Booi Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Iviwe Booi - Full Stack Developer & Software Engineer">
+    <meta name="twitter:description" content="Skilled Full Stack Developer specializing in modern web technologies. View my portfolio of innovative applications and projects.">
+    <meta name="twitter:image" content="https://iviwebooi.co.za/assets/images/me.jpeg">
+    <meta name="twitter:creator" content="@iviiwebooi">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="application-name" content="Iviwe Booi Portfolio">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/media-queries.css">
@@ -45,6 +77,60 @@
     <script src="js/config.js"></script>
     <script src="js/iconOptimizer.js"></script>
     <script src="js/init.js"></script>
+    
+    <!-- Structured Data (JSON-LD) for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Iviwe Booi",
+        "jobTitle": "Full Stack Developer",
+        "description": "Skilled Full Stack Developer and Software Engineer specializing in modern web technologies including JavaScript, Python, Java, HTML, and CSS.",
+        "url": "https://iviwebooi.co.za",
+        "image": "https://iviwebooi.co.za/assets/images/me.jpeg",
+        "sameAs": [
+            "https://www.linkedin.com/in/iviwe-booi-6b467129a/",
+            "https://github.com/IviweBooi",
+            "https://www.instagram.com/iviiwebooi/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cape Town",
+            "addressCountry": "South Africa"
+        },
+        "knowsAbout": [
+            "JavaScript",
+            "Python", 
+            "Java",
+            "HTML",
+            "CSS",
+            "Full Stack Development",
+            "Web Development",
+            "Software Engineering",
+            "React",
+            "Node.js"
+        ],
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "University of Cape Town"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Iviwe Booi Portfolio",
+        "url": "https://iviwebooi.co.za",
+        "description": "Portfolio website showcasing Full Stack Development projects and skills by Iviwe Booi",
+        "author": {
+            "@type": "Person",
+            "name": "Iviwe Booi"
+        },
+        "inLanguage": "en-US"
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -84,13 +170,13 @@
     <!-- main content -->
     <main>
         <!-- Landing page-->
-        <section class="landing-page">
+        <section class="landing-page" itemscope itemtype="https://schema.org/Person">
             <div class="name-surname">
                 <div class="circle"></div>
-                <p id="greeting-text">Hey! I'm Iviwe Booi</p>
+                <p id="greeting-text">Hey! I'm <span itemprop="name">Iviwe Booi</span></p>
             </div>
-            <h1 id="main-title">Building the Future, One Line of Code at a Time.</h1>
-            <p class="description" id="main-description">Software Dev. Passionate about crafting innovative solutions with modern technologies.</p>
+            <h1 id="main-title" itemprop="jobTitle">Full Stack Developer - Building the Future, One Line of Code at a Time.</h1>
+            <p class="description" id="main-description" itemprop="description">Software Developer & Engineer. Passionate about crafting innovative web applications with modern technologies like JavaScript, Python, and Java.</p>
             <div class="buttons">
                 <button class="see-my-work" id="see-work-btn">See My Work</button>
                 <a id="resume-link" style="text-decoration: none;" download>
@@ -105,17 +191,17 @@
         </section>
 
         <!-- About me page-->
-        <section class="about-me">
+        <section class="about-me" itemscope itemtype="https://schema.org/Person">
             <div class="left-div">
-                <h1>Meet Iviwe</h1>
-                <p>Hello! I'm Iviwe Booi, a passionate software developer and final-year
-                     Computer Science student at the University of Cape Town (UCT). My 
+                <h2>Meet Iviwe Booi - Full Stack Developer</h2>
+                <p>Hello! I'm <span itemprop="name">Iviwe Booi</span>, a passionate <span itemprop="jobTitle">Full Stack Developer</span> and final-year
+                     Computer Science student at the <span itemprop="alumniOf">University of Cape Town (UCT)</span>. My 
                      journey in the tech world has been fueled by a deep curiosity and 
-                     a desire to create innovative solutions that make a difference.
-                    With a solid foundation in HTML, CSS, JavaScript, Java, and Python, 
+                     a desire to create innovative web solutions that make a difference.
+                    With a solid foundation in <strong>HTML, CSS, JavaScript, Java, and Python</strong>, 
                     I have honed my skills through various personal projects that reflect my
                     creativity and technical prowess. I thrive on the challenge of transforming 
-                    ideas into dynamic and responsive applications, ensuring that they not only 
+                    ideas into dynamic and responsive web applications, ensuring that they not only 
                     function seamlessly but also provide an engaging user experience.</p>
                     <p>Throughout my academic career, I have embraced opportunities to 
                         expand my knowledge and collaborate with fellow students on 
@@ -155,8 +241,8 @@
                     <div class="circle"></div>
                     <p>Design process</p>
                 </div>
-                <h1>Process</h1>
-                <p>Crafting Innovative Solutions that Inspire and Elevate Brands Through Thoughtful Development.</p>
+                <h2>Development Process</h2>
+                <p>Crafting Innovative Web Solutions that Inspire and Elevate Brands Through Thoughtful Full Stack Development.</p>
                 <div class="buttons">
                     <button class="book-a-free-call">Book a Free Call</button>
                     <button class="see-projects">
@@ -188,7 +274,7 @@
 
         <!-- Projects page-->
         <section class="projects">
-            <h1>Personal Projects</h1>
+            <h2>Personal Web Development Projects</h2>
             <div class="personal-projects">
                 <div class="project-card">
                     <div class="project-media">
