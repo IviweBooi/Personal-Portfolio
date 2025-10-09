@@ -19,7 +19,10 @@ class IconOptimizer {
             'success.svg',
             'error.svg',
             'linkedin.svg',
-            'insta.svg'
+            'insta.svg',
+            'download.svg',
+            'arrow-down.svg',
+            'wave.svg'
         ];
     }
 
@@ -112,14 +115,37 @@ class IconOptimizer {
                 list.getEntries().forEach((entry) => {
                     if (entry.name.includes('assets/icons/') && entry.name.endsWith('.svg')) {
                         const loadTime = entry.responseEnd - entry.startTime;
-                        if (loadTime > 100) { // Log slow icon loads
-                            console.warn(`Slow icon load: ${entry.name} took ${loadTime.toFixed(2)}ms`);
+                        if (loadTime > 50) { // Reduced threshold for better monitoring
+                            console.warn(`Slow icon load: \`${entry.name}\` took ${loadTime.toFixed(2)}ms`);
+                            
+                            // Auto-optimize slow icons by adding aggressive caching
+                            this.addAggressiveCaching(entry.name);
                         }
                     }
                 });
             });
             observer.observe({ entryTypes: ['resource'] });
         }
+    }
+
+    /**
+     * Add aggressive caching for slow-loading icons
+     */
+    addAggressiveCaching(iconUrl) {
+        // Create a cached version with service worker-like behavior
+        if ('caches' in window) {
+            caches.open('icon-cache-v1').then(cache => {
+                cache.add(iconUrl).catch(err => {
+                    console.log('Cache add failed for:', iconUrl);
+                });
+            });
+        }
+        
+        // Also preload for next page visit
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = iconUrl;
+        document.head.appendChild(link);
     }
 }
 
