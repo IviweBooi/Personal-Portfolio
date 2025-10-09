@@ -7,13 +7,16 @@ const submitBtn = document.querySelector('#submit-btn');
 
 // Initialize EmailJS when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Ensure config is loaded before initializing EmailJS
-    if (window.CONFIG && window.CONFIG.EMAILJS_PUBLIC_KEY) {
+    // Check for environment variables first, then fallback to CONFIG object (for local development)
+    const publicKey = window.EMAILJS_PUBLIC_KEY || (window.CONFIG && window.CONFIG.EMAILJS_PUBLIC_KEY);
+    
+    if (publicKey) {
         emailjs.init({
-            publicKey: window.CONFIG.EMAILJS_PUBLIC_KEY,
+            publicKey: publicKey,
         });
+        console.log('EmailJS initialized successfully');
     } else {
-        console.error('EmailJS configuration not found');
+        console.error('EmailJS configuration not found. Please set environment variables or config.js');
     }
 });
 
@@ -42,14 +45,17 @@ Message: ${message.value.trim()}
         `
     };
 
-    // Check if EmailJS is properly configured
-    if (!window.CONFIG || !window.CONFIG.EMAILJS_SERVICE_ID || !window.CONFIG.EMAILJS_TEMPLATE_ID) {
+    // Check if EmailJS is properly configured (environment variables or CONFIG object)
+    const serviceId = window.EMAILJS_SERVICE_ID || (window.CONFIG && window.CONFIG.EMAILJS_SERVICE_ID);
+    const templateId = window.EMAILJS_TEMPLATE_ID || (window.CONFIG && window.CONFIG.EMAILJS_TEMPLATE_ID);
+    
+    if (!serviceId || !templateId) {
         setLoadingState(false);
         showError('Email service is not properly configured.');
         return;
     }
 
-    emailjs.send(window.CONFIG.EMAILJS_SERVICE_ID, window.CONFIG.EMAILJS_TEMPLATE_ID, templateParams)
+    emailjs.send(serviceId, templateId, templateParams)
     .then(() => {
         setLoadingState(false);
         showSuccess();
