@@ -1,6 +1,6 @@
 [build]
   # Build command to process environment variables
-  command = "node build-script.js"
+  command = "npm run build"
   publish = "."
 
 # Headers for security
