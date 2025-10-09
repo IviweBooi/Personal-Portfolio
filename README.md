@@ -2,21 +2,23 @@
 
 ![Portfolio Preview](assets/images/myLogo.png)
 
-A modern, responsive personal portfolio website showcasing my skills, projects, and professional journey as a software developer.
+A modern, responsive, and SEO-optimized personal portfolio website showcasing my skills, projects, and professional journey as a Full Stack Developer.
 
 ## 🌟 Live Demo
 
-[View Live Portfolio](https://iviwebooiportfolio.netlify.app)
+[View Live Portfolio](https://iviwebooi.co.za)
 
 ## 📋 Table of Contents
 
 - [About](#about)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [SEO & Performance](#seo--performance)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Deployment](#deployment)
 - [Contact Form Setup](#contact-form-setup)
+- [Security](#security)
 - [Customization](#customization)
 - [Contributing](#contributing)
 - [License](#license)
@@ -58,7 +60,17 @@ This portfolio website represents my journey as a software developer and final-y
 - **Resume Download**: Direct download link for my CV
 - **Social Links**: Professional social media integration
 - **Mobile Menu**: Hamburger menu for mobile navigation
-- **SEO Optimised**: Meta tags and semantic HTML structure
+- **Icon Optimization**: Intelligent SVG icon caching and preloading system
+- **Performance Monitoring**: Real-time icon load time tracking and optimization
+
+### 🚀 SEO & Performance
+- **Complete SEO Suite**: Meta tags, Open Graph, Twitter Cards, and structured data
+- **Google Search Console**: Verified and indexed for search visibility
+- **XML Sitemap**: Human-readable styled sitemap with visual enhancements
+- **Robots.txt**: Proper search engine crawling directives
+- **Semantic HTML**: Schema.org structured data for rich snippets
+- **Performance Optimized**: Icon caching, lazy loading, and optimized assets
+- **Mobile-First**: Responsive design with optimal mobile performance
 
 ## 🛠️ Technologies Used
 
@@ -76,6 +88,35 @@ This portfolio website represents my journey as a software developer and final-y
 - **Custom Icons**: SVG icons for consistent design
 - **Optimized Images**: Compressed images for fast loading
 - **Video Content**: Project demonstration videos
+
+## 🔍 SEO & Performance
+
+This portfolio is fully optimized for search engines and performance:
+
+### Search Engine Optimization
+- **Meta Tags**: Complete set of meta tags including title, description, keywords, and viewport
+- **Open Graph**: Facebook and social media sharing optimization
+- **Twitter Cards**: Enhanced Twitter sharing with custom cards
+- **Structured Data**: Schema.org Person markup for rich snippets
+- **Google Search Console**: Verified property for search performance monitoring
+- **XML Sitemap**: Comprehensive sitemap with visual styling for human readability
+- **Robots.txt**: Proper crawling directives for search engines
+
+### Performance Optimization
+- **Icon Optimizer**: Intelligent SVG icon caching and preloading system
+  - Automatic detection of slow-loading icons (>50ms threshold)
+  - Aggressive caching using Cache API
+  - Critical icon preloading for instant access
+  - Performance monitoring with console logging
+- **Optimized Assets**: Compressed images and minified code
+- **Lazy Loading**: Efficient resource loading strategies
+- **Mobile-First**: Responsive design optimized for all devices
+
+### Technical SEO Features
+- **Semantic HTML**: Proper heading hierarchy and semantic elements
+- **Accessibility**: ARIA labels and keyboard navigation support
+- **Fast Loading**: Optimized for Core Web Vitals
+- **Mobile Responsive**: Perfect mobile experience for better rankings
 
 ## 📁 Project Structure
 
@@ -100,16 +141,25 @@ Personal Portfolio/
 │       ├── weatherApp.mp4
 │       └── ... (project videos)
 ├── css/
-│   ├── styles.css
-│   └── media-queries.css
+│   ├── styles.css         # Main stylesheet
+│   ├── media-queries.css  # Responsive design
+│   └── variables.css      # CSS custom properties
 ├── js/
-│   ├── config.js          # EmailJS configuration
-│   ├── handleForm.js      # Form validation and EmailJS integration
+│   ├── config.example.js  # EmailJS configuration template (safe for git)
+│   ├── config.js          # EmailJS configuration (gitignored for security)
+│   ├── constants.js       # Application constants
+│   ├── formValidation.js  # Form validation logic
+│   ├── handleForm.js      # Form submission and EmailJS integration
 │   ├── handleForm.test.js # Form testing utilities
-│   └── utils.js           # General utility functions
+│   ├── iconOptimizer.js   # SVG icon optimization and caching
+│   ├── init.js           # Application initialization
+│   └── utils.js          # General utility functions
 ├── index.html
-├── netlify.toml
-├── .gitignore
+├── netlify.toml          # Netlify deployment configuration
+├── robots.txt            # Search engine crawling directives
+├── sitemap.xml           # XML sitemap for search engines
+├── sitemap.xsl           # XSL stylesheet for sitemap visualization
+├── .gitignore            # Git ignore rules (includes config.js)
 └── README.md
 ```
 
@@ -218,6 +268,40 @@ The contact form features advanced validation and EmailJS integration for reliab
    - Verify emails are received correctly
    - Test validation by entering invalid data
 
+## 🔒 Security
+
+This portfolio implements several security best practices:
+
+### Configuration Security
+- **Sensitive Data Protection**: EmailJS configuration keys are excluded from git tracking
+- **Environment Variables**: Production credentials stored securely in Netlify environment variables
+- **Git Ignore**: `config.js` file containing API keys is properly gitignored
+- **Example Configuration**: `config.example.js` provides a safe template for setup
+
+### Development Security
+- **Local Development**: Use actual credentials in local `config.js` (not tracked)
+- **Production Deployment**: Credentials injected via environment variables
+- **No Hardcoded Secrets**: All sensitive data properly externalized
+
+### Setup Instructions
+1. **Local Development**:
+   ```bash
+   # Copy the example config
+   cp js/config.example.js js/config.js
+   # Update js/config.js with your actual EmailJS credentials
+   ```
+
+2. **Production Deployment**:
+   - Set environment variables in Netlify dashboard
+   - Credentials are automatically injected during build
+   - No manual configuration needed
+
+### Security Features
+- **Form Validation**: Prevents malicious input and ensures data integrity
+- **Error Handling**: Graceful error handling without exposing sensitive information
+- **HTTPS**: Secure communication for all form submissions
+- **Input Sanitization**: Proper validation and sanitization of user inputs
+
 ## 🎨 Customization
 
 ### Personal Information
@@ -266,12 +350,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Email**: booiiviwe4394@gmail.com
 - **LinkedIn**: [https://www.linkedin.com/in/iviwe-booi-6b467129a/]
 - **GitHub**: [https://github.com/IviweBooi]
-- **Portfolio**: [https://iviwebooiportfolio.netlify.app]
+- **Portfolio**: [https://iviwebooi.co.za]
+
+---
+
+## 🎯 Recent Updates
+
+- ✅ **SEO Optimization**: Complete SEO suite with meta tags, structured data, and sitemap
+- ✅ **Performance Enhancement**: Icon optimization system with caching and preloading
+- ✅ **Security Improvements**: Proper handling of sensitive configuration data
+- ✅ **Google Search Console**: Verified and indexed for search visibility
+- ✅ **Styled Sitemap**: Human-readable XML sitemap with visual enhancements
 
 ---
 
 ⭐ **Star this repository if you found it helpful!**
 
-
-*Built with ❤️ by Iviwe Booi* 
+*Built with ❤️ by Iviwe Booi - Full Stack Developer*
 
