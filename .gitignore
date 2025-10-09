@@ -13,6 +13,10 @@ yarn.lock
 .env.test.local
 .env.production.local
 
+# Configuration files with sensitive data
+js/config.js
+config.js
+
 # IDE and Editor files
 .vscode/
 .idea/
@@ -148,4 +152,4 @@ emailjs-config.js
 assets/videos/*.mp4
 assets/videos/*.mov
 assets/videos/*.avi
-assets/videos/*.mkv 
+assets/videos/*.mkv
