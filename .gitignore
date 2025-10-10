@@ -14,8 +14,8 @@ yarn.lock
 .env.production.local
 
 # Configuration files with sensitive data
-js/config.js
-config.js
+# js/config.js - temporarily allowing for production deployment
+# config.js
 
 # IDE and Editor files
 .vscode/
