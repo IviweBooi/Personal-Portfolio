@@ -49,9 +49,20 @@ Message: ${message.value.trim()}
     const serviceId = window.EMAILJS_SERVICE_ID || (window.CONFIG && window.CONFIG.EMAILJS_SERVICE_ID);
     const templateId = window.EMAILJS_TEMPLATE_ID || (window.CONFIG && window.CONFIG.EMAILJS_TEMPLATE_ID);
     
-    if (!serviceId || !templateId) {
+    // Debug: Log the values being used
+    console.log('EmailJS Configuration Debug:');
+    console.log('Service ID:', serviceId);
+    console.log('Template ID:', templateId);
+    console.log('Environment variables:', {
+        EMAILJS_SERVICE_ID: window.EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID: window.EMAILJS_TEMPLATE_ID,
+        EMAILJS_PUBLIC_KEY: window.EMAILJS_PUBLIC_KEY
+    });
+    console.log('CONFIG object:', window.CONFIG);
+    
+    if (!serviceId || !templateId || serviceId.includes('your_') || templateId.includes('your_')) {
         setLoadingState(false);
-        showError('Email service is not properly configured.');
+        showError('Email service is not properly configured. Please update your EmailJS credentials.');
         return;
     }
 
