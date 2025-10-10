@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
+console.log('🚨 NETLIFY BUILD SCRIPT EXECUTING - THIS SHOULD APPEAR IN BUILD LOGS 🚨');
 console.log('🔧 Starting build script...');
 console.log('📁 Working directory:', __dirname);
 

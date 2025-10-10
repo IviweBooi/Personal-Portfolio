@@ -3,6 +3,9 @@
   command = "npm run build"
   publish = "."
 
+[build.environment]
+  NODE_VERSION = "18"
+
 # Headers for security
 [[headers]]
   for = "/*"
