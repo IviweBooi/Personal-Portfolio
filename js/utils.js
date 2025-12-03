@@ -139,31 +139,31 @@ document.querySelector('.book-a-free-call').addEventListener('click', () => {
 const projectData = [
     {
         title: 'Weather App',
-        liveUrl: 'https://weather-app-iviwe.netlify.app', // Replace with actual live URL
+        liveUrl: 'https://weather-app-iviwe.netlify.app', 
         githubUrl: 'https://github.com/IviweBooi/weather-app',
         description: 'A responsive weather application that provides real-time weather data with beautiful animations and intuitive user interface.'
     },
     {
         title: 'Contacts Manager',
-        liveUrl: 'https://contacts-manager-iviwe.netlify.app', // Replace with actual live URL
+        liveUrl: 'https://contacts-manager-iviwe.netlify.app', 
         githubUrl: 'https://github.com/IviweBooi/contacts-app',
         description: 'A comprehensive contact management system with CRUD operations, search functionality, and modern UI design.'
     },
     {
         title: 'Superhero Database',
-        liveUrl: 'https://superhero-database-iviwe.netlify.app', // Replace with actual live URL
+        liveUrl: 'https://superhero-database-iviwe.netlify.app', 
         githubUrl: 'https://github.com/IviweBooi/superhero-app',
         description: 'An interactive superhero database with detailed character information, search filters, and engaging visual design.'
     },
     {
         title: 'Pine City Zoo',
-        liveUrl: 'https://pine-city-zoo-iviwe.netlify.app', // Replace with actual live URL
+        liveUrl: 'https://pine-city-zoo-iviwe.netlify.app',
         githubUrl: 'https://github.com/IviweBooi/pine-city-zoo',
         description: 'A virtual zoo experience with interactive animal exhibits, educational content, and immersive navigation.'
     },
     {
         title: 'Calculator App',
-        liveUrl: 'https://calculator-app-iviwe.netlify.app', // Replace with actual live URL
+        liveUrl: 'https://calculator-app-iviwe.netlify.app', 
         githubUrl: 'https://github.com/IviweBooi/calculator-app',
         description: 'A sleek calculator application with advanced mathematical operations, memory functions, and responsive design.'
     }
