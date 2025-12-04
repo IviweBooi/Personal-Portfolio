@@ -163,7 +163,7 @@ const projectData = [
     },
     {
         title: 'Calculator App',
-        liveUrl: 'quickcalcgenius.netlify.app/', 
+        liveUrl: 'https://quickcalcgenius.netlify.app/', 
         githubUrl: 'https://github.com/IviweBooi/Calculator-Web-App',
         description: 'A sleek calculator application with advanced mathematical operations, memory functions, and responsive design.'
     }
