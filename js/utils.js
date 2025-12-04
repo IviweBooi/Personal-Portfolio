@@ -139,32 +139,32 @@ document.querySelector('.book-a-free-call').addEventListener('click', () => {
 const projectData = [
     {
         title: 'Weather App',
-        liveUrl: 'https://weather-app-iviwe.netlify.app', 
-        githubUrl: 'https://github.com/IviweBooi/weather-app',
+        liveUrl: 'https://mzantsiweather.netlify.app', 
+        githubUrl: 'https://github.com/IviweBooi/SA-Weather-App',
         description: 'A responsive weather application that provides real-time weather data with beautiful animations and intuitive user interface.'
     },
     {
         title: 'Contacts Manager',
-        liveUrl: 'https://contacts-manager-iviwe.netlify.app', 
-        githubUrl: 'https://github.com/IviweBooi/contacts-app',
+        liveUrl: '#', 
+        githubUrl: 'https://github.com/IviweBooi/contactBookApp',
         description: 'A comprehensive contact management system with CRUD operations, search functionality, and modern UI design.'
     },
     {
         title: 'Superhero Database',
-        liveUrl: 'https://superhero-database-iviwe.netlify.app', 
-        githubUrl: 'https://github.com/IviweBooi/superhero-app',
+        liveUrl: '#', 
+        githubUrl: 'https://github.com/IviweBooi/AvengersSuperheroWebsite',
         description: 'An interactive superhero database with detailed character information, search filters, and engaging visual design.'
     },
     {
         title: 'Pine City Zoo',
-        liveUrl: 'https://pine-city-zoo-iviwe.netlify.app',
-        githubUrl: 'https://github.com/IviweBooi/pine-city-zoo',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/IviweBooi/PineCityZooApp',
         description: 'A virtual zoo experience with interactive animal exhibits, educational content, and immersive navigation.'
     },
     {
         title: 'Calculator App',
-        liveUrl: 'https://calculator-app-iviwe.netlify.app', 
-        githubUrl: 'https://github.com/IviweBooi/calculator-app',
+        liveUrl: 'quickcalcgenius.netlify.app/', 
+        githubUrl: 'https://github.com/IviweBooi/Calculator-Web-App',
         description: 'A sleek calculator application with advanced mathematical operations, memory functions, and responsive design.'
     }
 ];
