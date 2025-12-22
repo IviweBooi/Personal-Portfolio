@@ -99,6 +99,8 @@ const CONSTANTS = {
         'Node.js',
         'Java',
         'Python',
+        'MySQL',
+        'Firebase',
         'Pytest',
         'REST APIs',
         'Flask',
