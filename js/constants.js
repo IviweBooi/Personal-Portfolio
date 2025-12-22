@@ -160,10 +160,11 @@ const CONSTANTS = {
 
     // About Me Text
     ABOUT_TEXT: {
-        INTRO: "Hello! I'm Iviwe Booi, a passionate software developer and final-year Computer Science student at the University of Cape Town (UCT). My journey in the tech world has been fueled by a deep curiosity and a desire to create innovative solutions that make a difference. With a solid foundation in HTML, CSS, JavaScript, Java, and Python, I have honed my skills through various personal projects that reflect my creativity and technical prowess. I thrive on the challenge of transforming ideas into dynamic and responsive applications, ensuring that they not only function seamlessly but also provide an engaging user experience.",
-        ACADEMIC: "Throughout my academic career, I have embraced opportunities to expand my knowledge and collaborate with fellow students on exciting projects. My experience has equipped me with a strong understanding of software development principles and best practices, empowering me to tackle complex problems with confidence.",
-        FUTURE: "As I approach the next chapter of my career, I am eager to leverage my skills in a professional environment where I can contribute to impactful projects and continue to grow as a developer. I am excited about the possibilities that lie ahead and look forward to connecting with like-minded individuals who share my passion for technology. Thank you for visiting my portfolio, and I hope you enjoy exploring my work!"
+    INTRO: "Hello! I'm Iviwe Booi, a passionate software engineer and Computer Science graduate from the University of Cape Town (UCT). My journey in tech has been driven by a deep curiosity and a desire to build innovative, impactful software solutions. With a strong foundation in HTML, CSS, JavaScript, Java, and Python, I have developed my skills through hands-on personal projects that showcase both creativity and solid engineering principles. I thrive on transforming ideas into dynamic, responsive applications that deliver seamless and engaging user experiences.",
+    ACADEMIC: "Through my academic and project-based experience, I have actively expanded my technical knowledge and collaborated with diverse teams on meaningful projects. These experiences have given me a strong understanding of software development principles and best practices, enabling me to approach complex problems with confidence, structure, and adaptability.",
+    FUTURE: "I am now seeking opportunities where I can apply my skills in a professional environment, contribute to real-world projects, and continue growing as a software engineer. I’m excited about building technology that creates value and impact, and I look forward to connecting with like-minded individuals who share a passion for innovation. Thank you for visiting my portfolio — I hope you enjoy exploring my work!"
     },
+
 
     // Design Process Text
     DESIGN_PROCESS: {
