@@ -7,7 +7,10 @@ const CONSTANTS = {
         NAME: 'Iviwe Booi',
         INITIALS: 'IB',
         EMAIL: 'booiiviwe4394@gmail.com',
-        TITLE: 'Building the Future, One Line of Code at a Time.',
+        LINKEDIN: 'https://www.linkedin.com/in/iviwe-booi-6b467129a/',
+        GITHUB: 'https://github.com/IviweBooi',
+        INSTAGRAM: 'https://www.instagram.com/iviiwebooi/',
+        TITLE: 'Full Stack Developer - Building the Future, One Line of Code at a Time.',
         DESCRIPTION: 'Software Dev. Passionate about crafting innovative solutions with modern technologies.',
         UNIVERSITY: 'University of Cape Town (UCT)',
         GREETING: "Hey! I'm Iviwe Booi"
@@ -127,7 +130,7 @@ const CONSTANTS = {
     // Navigation Items
     NAVIGATION: [
         { text: 'About', class: 'about-btn' },
-        { text: 'Projects', class: 'projects-btn' },
+        { text: 'Work', class: 'projects-btn' },
         { text: 'Certs', class: 'certs-btn' },
         { text: 'FAQs', class: 'FAQs-btn' },
         { text: 'Contact', class: 'contact-btn' }

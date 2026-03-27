@@ -182,9 +182,9 @@ header .right-div{
     display: flex;
     align-items: center;
     justify-content: end;
-    flex: 1;
+    flex: 2; /* Give more space to the right side */
     padding-right: 20px;
-    gap: 10px;
+    gap: 15px;
 }
 
 #menu{
@@ -197,20 +197,21 @@ header .right-div{
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 2px; /* Reduced gap to fit more items */
 }
 
 #menu ul li{
     background-color: transparent;
-    padding: 10px;
+    padding: 8px 10px; /* Slightly reduced padding */
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: var(--transition);
     color: white;
     font-family: var(--body-font);
-    font-size: 15px;
+    font-size: 14px; /* Slightly reduced font size */
     font-weight: 200;
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 #menu ul li:hover{
@@ -851,7 +852,8 @@ header .right-div{
     border-radius: 15px 15px 0 0;
 }
 
-.project-media video{
+.project-media video,
+.project-media img{
     position: absolute;
     top: 0;
     left: 0;
@@ -913,7 +915,14 @@ header .right-div{
     }
 }
 
-.project-media.loading video {
+.project-media video:hover,
+.project-media img:hover{
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.project-media.loading video,
+.project-media.loading img {
     opacity: 0;
 }
 
@@ -921,13 +930,73 @@ header .right-div{
     display: none;
 }
 
-.project-media.loaded video {
+.project-media.loaded .shimmer-loader {
+    display: none;
+}
+
+.project-media.loaded video,
+.project-media.loaded img {
     opacity: 1;
 }
 
-.project-media video:hover{
-    transform: scale(1.05);
-    filter: grayscale(0%);
+/* Live Badge for projects */
+.live-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.project-media.loaded:hover .live-badge {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.live-badge:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+.live-badge .circle {
+    width: 8px;
+    height: 8px;
+    background-color: #b3ff32; /* Primary green */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #b3ff32;
+    animation: glow 2s infinite;
+}
+
+.live-badge:hover .circle {
+    box-shadow: 0 0 15px #b3ff32;
+}
+
+.loading-projects,
+.error-projects,
+.no-projects {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    font-size: var(--font-size-xl);
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-white-transparent);
 }
 
 .project-info{

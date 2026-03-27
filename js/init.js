@@ -79,8 +79,11 @@ function initializePage() {
         arrowDownIcon.src = CONSTANTS.PATHS.ICONS.ARROW_DOWN;
     }
 
-    // Initialize navigation menu
-    initializeNavigation();
+    // Initialize navigation event listeners
+    addNavigationEventListeners();
+    
+    // Initialize social media links
+    initializeSocials();
     
     // Initialize about section
     initializeAboutSection();
@@ -93,25 +96,6 @@ function initializePage() {
     
     // Initialize FAQs section
     initializeFAQs();
-}
-
-function initializeNavigation() {
-    const navMenu = document.querySelector('#menu ul');
-    if (navMenu && CONSTANTS.NAVIGATION) {
-        // Clear existing navigation items
-        navMenu.innerHTML = '';
-        
-        // Add navigation items from constants
-        CONSTANTS.NAVIGATION.forEach(item => {
-            const li = document.createElement('li');
-            li.className = item.class;
-            li.textContent = item.text;
-            navMenu.appendChild(li);
-        });
-        
-        // Add smooth scrolling event listeners after creating navigation items
-        addNavigationEventListeners();
-    }
 }
 
 function addNavigationEventListeners() {
@@ -333,6 +317,16 @@ function addFAQEventListeners() {
             }
         });
     });
+}
+
+function initializeSocials() {
+    const linkedinLink = document.getElementById('linkedin-link');
+    const githubLink = document.getElementById('github-link');
+    const instagramLink = document.getElementById('instagram-link');
+
+    if (linkedinLink) linkedinLink.href = CONSTANTS.PERSONAL.LINKEDIN;
+    if (githubLink) githubLink.href = CONSTANTS.PERSONAL.GITHUB;
+    if (instagramLink) instagramLink.href = CONSTANTS.PERSONAL.INSTAGRAM;
 }
 
 // Initialize when DOM is loaded
