@@ -60,7 +60,7 @@ Message: ${message.value.trim()}
     });
     console.log('CONFIG object:', window.CONFIG);
     
-    if (!serviceId || !templateId || serviceId.includes('your_') || templateId.includes('your_')) {
+    if (!serviceId || !templateId || serviceId.includes('your_') || templateId.includes('your_') || serviceId.includes('[[') || templateId.includes('[[')) {
         setLoadingState(false);
         showError('Email service is not properly configured. Please update your EmailJS credentials.');
         return;

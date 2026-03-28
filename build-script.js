@@ -37,9 +37,9 @@ try {
     console.log(`  Template ID: ${emailjsTemplateId ? `Set ✅ (${emailjsTemplateId})` : 'Missing ❌'}`);
 
     // Check if placeholders exist in HTML
-    const hasPublicKeyPlaceholder = htmlContent.includes('${EMAILJS_PUBLIC_KEY}');
-    const hasServiceIdPlaceholder = htmlContent.includes('${EMAILJS_SERVICE_ID}');
-    const hasTemplateIdPlaceholder = htmlContent.includes('${EMAILJS_TEMPLATE_ID}');
+    const hasPublicKeyPlaceholder = htmlContent.includes('[[EMAILJS_PUBLIC_KEY]]');
+    const hasServiceIdPlaceholder = htmlContent.includes('[[EMAILJS_SERVICE_ID]]');
+    const hasTemplateIdPlaceholder = htmlContent.includes('[[EMAILJS_TEMPLATE_ID]]');
     
     console.log('🔍 Placeholders in HTML:');
     console.log(`  Public Key placeholder: ${hasPublicKeyPlaceholder ? 'Found ✅' : 'Missing ❌'}`);
@@ -49,23 +49,23 @@ try {
     // Replace template variables with actual environment variables
     let replacements = 0;
     if (emailjsPublicKey && hasPublicKeyPlaceholder) {
-        const before = htmlContent.match(/\$\{EMAILJS_PUBLIC_KEY\}/g)?.length || 0;
-        htmlContent = htmlContent.replace(/\$\{EMAILJS_PUBLIC_KEY\}/g, emailjsPublicKey);
-        const after = htmlContent.match(/\$\{EMAILJS_PUBLIC_KEY\}/g)?.length || 0;
+        const before = htmlContent.match(/\[\[EMAILJS_PUBLIC_KEY\]\]/g)?.length || 0;
+        htmlContent = htmlContent.replace(/\[\[EMAILJS_PUBLIC_KEY\]\]/g, emailjsPublicKey);
+        const after = htmlContent.match(/\[\[EMAILJS_PUBLIC_KEY\]\]/g)?.length || 0;
         console.log(`🔄 Replaced ${before - after} instances of EMAILJS_PUBLIC_KEY`);
         replacements += before - after;
     }
     if (emailjsServiceId && hasServiceIdPlaceholder) {
-        const before = htmlContent.match(/\$\{EMAILJS_SERVICE_ID\}/g)?.length || 0;
-        htmlContent = htmlContent.replace(/\$\{EMAILJS_SERVICE_ID\}/g, emailjsServiceId);
-        const after = htmlContent.match(/\$\{EMAILJS_SERVICE_ID\}/g)?.length || 0;
+        const before = htmlContent.match(/\[\[EMAILJS_SERVICE_ID\]\]/g)?.length || 0;
+        htmlContent = htmlContent.replace(/\[\[EMAILJS_SERVICE_ID\]\]/g, emailjsServiceId);
+        const after = htmlContent.match(/\[\[EMAILJS_SERVICE_ID\]\]/g)?.length || 0;
         console.log(`🔄 Replaced ${before - after} instances of EMAILJS_SERVICE_ID`);
         replacements += before - after;
     }
     if (emailjsTemplateId && hasTemplateIdPlaceholder) {
-        const before = htmlContent.match(/\$\{EMAILJS_TEMPLATE_ID\}/g)?.length || 0;
-        htmlContent = htmlContent.replace(/\$\{EMAILJS_TEMPLATE_ID\}/g, emailjsTemplateId);
-        const after = htmlContent.match(/\$\{EMAILJS_TEMPLATE_ID\}/g)?.length || 0;
+        const before = htmlContent.match(/\[\[EMAILJS_TEMPLATE_ID\]\]/g)?.length || 0;
+        htmlContent = htmlContent.replace(/\[\[EMAILJS_TEMPLATE_ID\]\]/g, emailjsTemplateId);
+        const after = htmlContent.match(/\[\[EMAILJS_TEMPLATE_ID\]\]/g)?.length || 0;
         console.log(`🔄 Replaced ${before - after} instances of EMAILJS_TEMPLATE_ID`);
         replacements += before - after;
     }

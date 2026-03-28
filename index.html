@@ -61,14 +61,15 @@
     </script>
     <script type="text/javascript">
         // Set environment variables for production (Netlify will inject these)
-        window.EMAILJS_PUBLIC_KEY = '${EMAILJS_PUBLIC_KEY}' !== '${EMAILJS_PUBLIC_KEY}' ? '${EMAILJS_PUBLIC_KEY}' : undefined;
-        window.EMAILJS_SERVICE_ID = '${EMAILJS_SERVICE_ID}' !== '${EMAILJS_SERVICE_ID}' ? '${EMAILJS_SERVICE_ID}' : undefined;
-        window.EMAILJS_TEMPLATE_ID = '${EMAILJS_TEMPLATE_ID}' !== '${EMAILJS_TEMPLATE_ID}' ? '${EMAILJS_TEMPLATE_ID}' : undefined;
+        window.EMAILJS_PUBLIC_KEY = '[[EMAILJS_PUBLIC_KEY]]';
+        window.EMAILJS_SERVICE_ID = '[[EMAILJS_SERVICE_ID]]';
+        window.EMAILJS_TEMPLATE_ID = '[[EMAILJS_TEMPLATE_ID]]';
         
         // For local development: Load from .env.local if environment variables are not set
-        // Note: In a real application, you would use a build tool to inject these
-        // For now, manually replace the values in .env.local file
-        if (!window.EMAILJS_PUBLIC_KEY) {
+        if (window.EMAILJS_PUBLIC_KEY.includes('[[EMAILJS_PUBLIC_KEY]]')) {
+            window.EMAILJS_PUBLIC_KEY = undefined;
+            window.EMAILJS_SERVICE_ID = undefined;
+            window.EMAILJS_TEMPLATE_ID = undefined;
             console.log('Environment variables not found. Please set your EmailJS credentials in .env.local file.');
         }
     </script>
