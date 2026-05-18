@@ -183,6 +183,11 @@ function setLoadingState(isLoading) {
 function showSuccess() {
     document.querySelector('#success').style.display = 'flex';
     document.querySelector('#error').style.display = 'none';
+    // Hide the contact form elements when showing success
+    document.querySelector('.contact-form').style.display = 'none';
+    document.querySelector('.contact-me h1').style.display = 'none';
+    document.querySelectorAll('.contact-me p').forEach(p => p.style.display = 'none');
+    document.querySelector('.social-media').style.display = 'none';
 }
 
 function showError(message) {
@@ -193,9 +198,16 @@ function showError(message) {
     }
     errorElement.style.display = 'flex';
     document.querySelector('#success').style.display = 'none';
+    // Hide the contact form elements when showing an error
+    document.querySelector('.contact-form').style.display = 'none';
+    document.querySelector('.contact-me h1').style.display = 'none';
+    document.querySelectorAll('.contact-me p').forEach(p => p.style.display = 'none');
+    document.querySelector('.social-media').style.display = 'none';
 }
 
-function resetForm() {
+document.querySelectorAll('.close-btn').forEach(btn => {
+    btn.addEventListener('click', resetForm);
+});
     fullName.value = '';
     email.value = '';
     phone.value = '';
@@ -210,6 +222,16 @@ function resetForm() {
     
     // Reset button state
     updateSubmitButton(false);
+    
+    // Show the contact form elements again when closing the feedback
+    document.querySelector('.contact-form').style.display = 'flex';
+    document.querySelector('.contact-me h1').style.display = 'block';
+    document.querySelectorAll('.contact-me p').forEach(p => p.style.display = 'block');
+    document.querySelector('.social-media').style.display = 'flex';
+    
+    // Hide success and error
+    document.querySelector('#success').style.display = 'none';
+    document.querySelector('#error').style.display = 'none';
 }
 
 
