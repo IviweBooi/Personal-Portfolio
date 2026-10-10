@@ -1,16 +1,19 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "description": "Personal portfolio website with contact form",
-  "main": "index.html",
+  "description": "Iviwe Booi \u2014 software engineering portfolio",
   "scripts": {
     "build": "node build-script.js",
-    "dev": "python -m http.server 8000"
+    "dev": "python3 -m http.server 8000 --directory site"
   },
-  "keywords": ["portfolio", "website", "emailjs", "contact-form"],
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "static-site"
+  ],
   "author": "Iviwe Booi",
   "license": "MIT",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=22"
   }
 }
